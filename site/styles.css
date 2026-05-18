@@ -77,12 +77,18 @@ a {
 .brand {
   display: flex;
   align-items: center;
-  gap: 0;
+  gap: 12px;
   font-family: 'IBM Plex Mono', monospace;
   font-size: 18px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: -0.02em;
+}
+
+.brand-icon {
+  width: 32px;
+  height: 32px;
+  filter: brightness(0) saturate(100%) invert(88%) sepia(100%) saturate(2000%) hue-rotate(35deg);
 }
 
 .brand-bracket {
