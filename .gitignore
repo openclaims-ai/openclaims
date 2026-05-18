@@ -15,3 +15,7 @@ __pycache__/
 # Build/cache output
 dist/
 coverage/
+
+# Markdown linter
+.markdownlint-cli2.jsonc
+.markdownlintignore
