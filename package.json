@@ -1,0 +1,23 @@
+{
+  "name": "openclaims",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/check-js.mjs",
+    "test": "node scripts/run-tests.mjs",
+    "fixtures": "node packages/validator-cli/src/index.js fixtures",
+    "validate": "node packages/validator-cli/src/index.js validate"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "fastify": "^5.6.2"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

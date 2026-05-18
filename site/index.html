@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Connect AI claims to exact evidence, source lineage, and verification history. Open standard for RAG systems and document-grounded AI."
+    />
+    <meta property="og:title" content="OpenClaims - Claim Provenance for AI Systems" />
+    <meta property="og:description" content="Connect AI claims to exact evidence, source lineage, and verification history. Open standard for RAG systems and document-grounded AI." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="OpenClaims - Claim Provenance for AI Systems" />
+    <meta name="twitter:description" content="Connect AI claims to exact evidence, source lineage, and verification history." />
+    <title>OpenClaims - Claim Provenance for AI Systems</title>
+    <link rel="icon" href="./assets/openclaims-icon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="OpenClaims home">
+        <span class="brand-bracket">[</span><span>OpenClaims</span><span class="brand-bracket">]</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="https://github.com/openclaims/openclaims/blob/main/docs/user-guide.md">/docs</a>
+        <a href="https://github.com/openclaims/openclaims/blob/main/spec/README.md">/spec</a>
+        <a href="https://github.com/openclaims/openclaims" target="_blank" rel="noopener">/github</a>
+      </nav>
+      <a class="header-action" href="#quick-example">→ Example</a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-content">
+          <div class="hero-label">CLAIM_PROVENANCE_PROTOCOL</div>
+          <h1 id="hero-title">Track AI Claims<br/>to Exact Evidence</h1>
+          <p class="hero-tagline">
+            Open standard for recording what your AI claimed, which evidence supports it, and how it was verified.
+          </p>
+          <div class="hero-meta">
+            <span class="meta-item">→ RAG Systems</span>
+            <span class="meta-item">→ Document-Grounded AI</span>
+            <span class="meta-item">→ Compliance Ready</span>
+          </div>
+          <div class="hero-actions">
+            <a class="button primary" href="https://github.com/openclaims/openclaims">
+              <span>Get Started</span>
+              <span class="button-arrow">→</span>
+            </a>
+            <a class="button secondary" href="#quick-example">
+              <span>See Example</span>
+            </a>
+          </div>
+          <div class="trust-signals">
+            <span class="badge">JSON_SCHEMA_VALIDATED</span>
+            <span class="badge">TS_+_PY_SDKS</span>
+            <span class="badge">v0.1_EARLY_ACCESS</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="example-card">
+            <div class="card-header">
+              <span class="card-indicator">●</span>
+              <span>CLAIM_WITH_EVIDENCE</span>
+            </div>
+            <div class="card-body">
+              <div class="claim-line">
+                <span class="line-num">01</span>
+                <span class="claim-text">"Policy requires manager approval"</span>
+              </div>
+              <div class="evidence-line">
+                <span class="line-num">02</span>
+                <div class="evidence-content">
+                  <span class="evidence-label">EVIDENCE:</span>
+                  <span class="evidence-value">travel.pdf · Page 7, chars 1220–1310</span>
+                </div>
+              </div>
+              <div class="meta-line">
+                <span class="line-num">03</span>
+                <div class="meta-content">
+                  <span class="status-verified">✓ VERIFIED_96%</span>
+                  <span class="tool-info">policy-index-search</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="quick-example" id="quick-example">
+        <div class="section-label">QUICK_START</div>
+        <h2>Run in 30 Seconds</h2>
+        <div class="code-block">
+          <div class="code-header">
+            <span>terminal</span>
+            <span class="code-indicator">◆</span>
+          </div>
+          <pre><code><span class="code-prompt">$</span> pnpm install
+<span class="code-prompt">$</span> node packages/validator-cli/src/index.js fixtures</code></pre>
+        </div>
+        <a class="link-docs" href="https://github.com/openclaims/openclaims/blob/main/docs/user-guide.md">
+          Read Full Documentation →
+        </a>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-left">
+        <span class="footer-version">[v0.1_EARLY_ACCESS]</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/openclaims/openclaims">/github</a>
+        <a href="https://github.com/openclaims/openclaims/blob/main/docs/user-guide.md">/docs</a>
+        <a href="https://github.com/openclaims/openclaims/blob/main/spec/README.md">/spec</a>
+      </div>
+    </footer>
+  </body>
+</html>

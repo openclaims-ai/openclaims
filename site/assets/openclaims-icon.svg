@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">OpenClaims icon</title>
+  <desc id="desc">Speech bubble with quote marks and connected evidence lineage nodes.</desc>
+  <defs>
+    <linearGradient id="lineage" x1="20" y1="24" x2="112" y2="108" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1769e0"/>
+      <stop offset="0.45" stop-color="#16a9e8"/>
+      <stop offset="0.72" stop-color="#2fa69c"/>
+      <stop offset="1" stop-color="#7b58df"/>
+    </linearGradient>
+  </defs>
+  <path
+    d="M34 98.5c-8.7-6.6-14.3-16.9-14.3-28.5 0-20.1 16.9-36.4 37.8-36.4 11.6 0 22 5 28.9 12.9"
+    fill="none"
+    stroke="url(#lineage)"
+    stroke-width="8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M34 98.5 23.8 100l3.9-9.5"
+    fill="none"
+    stroke="url(#lineage)"
+    stroke-width="8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M31.5 67.5c0-7 4.2-13.4 10.8-16.2M51.5 67.5c0-7 4.2-13.4 10.8-16.2"
+    fill="none"
+    stroke="#082b4f"
+    stroke-width="7"
+    stroke-linecap="round"
+  />
+  <path
+    d="M39 92.5 63 94.5 91.5 76.5 107 102"
+    fill="none"
+    stroke="url(#lineage)"
+    stroke-width="8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M96 50c7.1 0 12.8-5.7 12.8-12.8S103.1 24.4 96 24.4 83.2 30.1 83.2 37.2 88.9 50 96 50Zm0 0-3.2 17"
+    fill="none"
+    stroke="url(#lineage)"
+    stroke-width="7"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <circle cx="63" cy="94.5" r="12.8" fill="#fff" stroke="url(#lineage)" stroke-width="7"/>
+  <circle cx="91.5" cy="76.5" r="12.8" fill="#fff" stroke="url(#lineage)" stroke-width="7"/>
+  <circle cx="107" cy="102" r="10.8" fill="#fff" stroke="url(#lineage)" stroke-width="7"/>
+  <circle cx="96" cy="37.2" r="10.8" fill="#fff"/>
+  <circle cx="92.8" cy="67" r="3.8" fill="#16a9e8"/>
+</svg>

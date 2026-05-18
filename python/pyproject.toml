@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "openclaims"
+version = "0.1.0"
+description = "Python SDK for OpenClaims v0.1"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+  { name = "OpenClaims contributors" }
+]
+keywords = ["openclaims", "claims", "events", "canonical-json"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+]
+dependencies = ["pydantic>=2"]
+
+[project.optional-dependencies]
+pydantic = ["pydantic>=2"]
+test = ["pytest>=7"]
+
+[tool.setuptools]
+packages = ["openclaims"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

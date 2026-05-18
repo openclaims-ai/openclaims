@@ -1,0 +1,17 @@
+node_modules/
+data/
+.DS_Store
+*.log
+
+# Python
+__pycache__/
+.pytest_cache/
+.venv/
+*.pyc
+
+# Local editor and tool state
+.claude/settings.local.json
+
+# Build/cache output
+dist/
+coverage/
