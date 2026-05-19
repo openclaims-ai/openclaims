@@ -31,11 +31,12 @@
         <span class="brand-bracket">[</span><span>OpenClaims</span><span class="brand-bracket">]</span>
       </a>
       <nav aria-label="Primary navigation">
+        <a href="#verified-demo">/demo</a>
         <a href="https://github.com/openclaims-ai/openclaims/blob/main/docs/user-guide.md">/docs</a>
         <a href="https://github.com/openclaims-ai/openclaims/blob/main/spec/README.md">/spec</a>
         <a href="https://github.com/openclaims-ai/openclaims" target="_blank" rel="noopener">/github</a>
       </nav>
-      <a class="header-action" href="#quick-example">→ Example</a>
+      <a class="header-action" href="#verified-demo">→ Demo</a>
     </header>
 
     <main id="top">
@@ -56,8 +57,8 @@
               <span>Get Started</span>
               <span class="button-arrow">→</span>
             </a>
-            <a class="button secondary" href="#quick-example">
-              <span>See Example</span>
+            <a class="button secondary" href="#verified-demo">
+              <span>Try Demo</span>
             </a>
           </div>
           <div class="trust-signals">
@@ -97,6 +98,67 @@
         </div>
       </section>
 
+      <section class="verified-demo" id="verified-demo" aria-labelledby="verified-demo-title">
+        <div class="demo-intro">
+          <div>
+            <div class="section-label">VERIFIED_ANALYSIS_DEMO</div>
+            <h2 id="verified-demo-title">From AI Answer to Evidence Trail</h2>
+          </div>
+          <p>
+            A static travel-policy scenario showing how OpenClaims records each material claim,
+            its source evidence, verification state, tool run, and lifecycle events.
+          </p>
+        </div>
+
+        <div class="demo-shell" aria-label="Verified analysis interactive demo">
+          <div class="analysis-panel">
+            <div class="panel-header">
+              <span>USER_QUESTION</span>
+              <span class="panel-indicator">◆</span>
+            </div>
+            <p class="question-text">Does the travel policy require approval for overnight trips?</p>
+
+            <div class="answer-block">
+              <div class="answer-label">AI_ANSWER_WITH_CLAIMS</div>
+              <p>
+                Yes. Overnight business trips require manager approval before booking.
+                The supporting policy language is on page 7. A prior statement that director
+                approval is not required is now disputed because the revised policy adds that
+                requirement for international overnight travel.
+              </p>
+            </div>
+
+            <div class="claim-list" id="demo-claim-list" aria-label="Material claims"></div>
+          </div>
+
+          <aside class="evidence-panel" aria-live="polite" aria-label="Selected claim evidence">
+            <div class="panel-header">
+              <span>OPENCLAIMS_RECORD</span>
+              <span id="demo-selected-status" class="status-chip">SUPPORTED</span>
+            </div>
+
+            <div class="selected-claim">
+              <span class="selected-label">SELECTED_CLAIM</span>
+              <h3 id="demo-selected-claim">Loading claim...</h3>
+            </div>
+
+            <div class="demo-actions" aria-label="Demo actions">
+              <button class="mini-button" type="button" id="demo-show-evidence">Show evidence</button>
+              <button class="mini-button" type="button" id="demo-view-json">View OpenClaims JSON</button>
+              <button class="mini-button accent" type="button" id="demo-export-jsonld">Export JSON-LD</button>
+            </div>
+
+            <div class="tab-list" role="tablist" aria-label="Claim record views">
+              <button class="tab-button is-active" type="button" role="tab" aria-selected="true" data-tab="evidence">Evidence</button>
+              <button class="tab-button" type="button" role="tab" aria-selected="false" data-tab="json">Event JSON</button>
+              <button class="tab-button" type="button" role="tab" aria-selected="false" data-tab="lifecycle">Lifecycle</button>
+            </div>
+
+            <div class="tab-panel" id="demo-tab-panel" role="tabpanel"></div>
+          </aside>
+        </div>
+      </section>
+
       <section class="quick-example" id="quick-example">
         <div class="section-label">QUICK_START</div>
         <h2>Run in 30 Seconds</h2>
@@ -125,5 +187,6 @@
         <a href="https://github.com/openclaims-ai/openclaims/blob/main/spec/README.md">/spec</a>
       </div>
     </footer>
+    <script type="module" src="./demo.js"></script>
   </body>
 </html>
