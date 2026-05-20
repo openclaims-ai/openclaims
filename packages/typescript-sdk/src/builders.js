@@ -74,13 +74,21 @@ export function createClaimEmittedEvent({
   });
 }
 
-export function createVerificationEvent({ claim_ref, producer, verification, event_time, evidence = [], agents = [] }) {
+export function createVerificationEvent({
+  claim_ref,
+  producer,
+  verification,
+  event_time,
+  evidence = [],
+  agents = [],
+  auditable_trace
+}) {
   return createBaseEvent({
     event_type: "claim.verified",
     event_time,
     producer,
     claim_ref,
-    extra: { verification, evidence, agents }
+    extra: { verification, evidence, agents, auditable_trace }
   });
 }
 
@@ -90,14 +98,15 @@ export function createDisputeEvent({
   verification,
   contradicting_evidence = [],
   dispute_rationale,
-  event_time
+  event_time,
+  auditable_trace
 }) {
   return createBaseEvent({
     event_type: "claim.disputed",
     event_time,
     producer,
     claim_ref,
-    extra: { verification, contradicting_evidence, dispute_rationale }
+    extra: { verification, contradicting_evidence, dispute_rationale, auditable_trace }
   });
 }
 

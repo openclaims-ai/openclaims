@@ -1,0 +1,647 @@
+{
+  "question": "Does the travel policy require approval for overnight trips?",
+  "answer": "Yes. Overnight business trips require manager approval before booking. The supporting policy language is on page 7. A prior statement that director approval is not required is disputed by revised-policy evidence for international overnight travel.",
+  "events": [
+    {
+      "event_type": "claim.emitted",
+      "event_time": "2026-05-19T15:02:14Z",
+      "spec_version": "0.1.0",
+      "schema_url": "https://openclaims.org/schemas/openclaims/0.1/ClaimEvent.schema.json",
+      "producer": {
+        "agent_id": "urn:openclaims:demo:verified-analysis-agent",
+        "agent_type": "pipeline",
+        "name": "OpenClaims Verified Analysis Demo",
+        "uri": "https://openclaims.org/examples/verified-analysis"
+      },
+      "claim": {
+        "claim_id": "clm_FXbFBPRKFQEqLqmtRTWHtJjowu",
+        "text": "Overnight business trips require manager approval before booking.",
+        "claim_type": "factual",
+        "context": {
+          "question": "Does the travel policy require approval for overnight trips?",
+          "answer_id": "verified-analysis-demo-answer"
+        },
+        "asserted_at": "2026-05-19T15:02:14Z",
+        "derived_from_claims": [],
+        "relations": []
+      },
+      "sources": [
+        {
+          "source_id": "src_3dU6c-5_RhSLPt6l4vHKjg0lxS",
+          "uri": "file://examples/verified-analysis/corpus/travel-policy.md",
+          "version": "2026.3",
+          "observed_at": "2026-05-19T15:02:16Z",
+          "retrieved_at": "2026-05-19T15:02:16Z",
+          "digest": {
+            "algorithm": "sha256",
+            "encoding": "base64url",
+            "value": "2I1VqmUNUQqYhARJscUlCmsCuWTPRJLH1Z0XG5Uqb3I"
+          },
+          "facets": {
+            "document": {
+              "_producer": "https://openclaims.org/examples/verified-analysis",
+              "_schemaURL": "https://openclaims.org/schemas/openclaims/0.1/facets/DocumentFacet.schema.json",
+              "title": "Acme Travel and Expense Policy"
+            }
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "evidence_id": "ev_flnmeoZ2VYTMaPGczN0uQ6zMvY",
+          "source_ref": "src_3dU6c-5_RhSLPt6l4vHKjg0lxS",
+          "claim_ref": "clm_FXbFBPRKFQEqLqmtRTWHtJjowu",
+          "selector": {
+            "type": "page_span",
+            "page": 7,
+            "start": 69,
+            "end": 181
+          },
+          "support_type": "supports_directly",
+          "content_digest": {
+            "algorithm": "sha256",
+            "encoding": "base64url",
+            "value": "lZAzNgwyKQLNXvkhiTpASLtqOVWKmxnpoMg5ls65x8g"
+          },
+          "observed_at": "2026-05-19T15:02:16Z",
+          "facets": {
+            "quote": {
+              "_producer": "https://openclaims.org/examples/verified-analysis",
+              "_schemaURL": "https://openclaims.org/schemas/openclaims/0.1/facets/QuoteFacet.schema.json",
+              "text": "Overnight business travel must be approved by the employee's manager before airfare, lodging, or rail is booked."
+            }
+          }
+        }
+      ],
+      "tool_runs": [
+        {
+          "tool_run_id": "run_uhx2f9wxdthPI-aq8jY3hYGokc",
+          "tool_type": "retriever",
+          "tool": {
+            "name": "deterministic-policy-retriever",
+            "version": "0.1.0",
+            "provider": "openclaims",
+            "model": "none",
+            "model_version": "offline",
+            "prompt_template_id": "verified-analysis-demo-v1"
+          },
+          "parameters_summary": {
+            "question_digest": {
+              "algorithm": "sha256",
+              "encoding": "base64url",
+              "value": "s7-ziUKJswZz-rns1cs9kqZbITMGrksNywL6SOP_V4c"
+            },
+            "corpus_digest": {
+              "algorithm": "sha256",
+              "encoding": "base64url",
+              "value": "zLATn-wGMf0jDNkOkkNSVycB050rYF8S6rC6L5bZ2bE"
+            },
+            "top_k": 3,
+            "network": "disabled"
+          },
+          "parameters_digest": {
+            "algorithm": "sha256",
+            "encoding": "base64url",
+            "value": "jc2M9UWh1uS13x-FezNq63LpEVUEgLtL6FfeJwisek8"
+          },
+          "trace_ref": "verified-analysis-demo/offline-run-001"
+        }
+      ],
+      "inferences": [],
+      "agents": [],
+      "auditable_trace": {
+        "event_ids": [],
+        "hash_chain": []
+      },
+      "event_id": "evt_6TNjBcVMIyrApVLPY6LamsMBj_",
+      "digest": {
+        "algorithm": "sha256",
+        "encoding": "base64url",
+        "value": "pEkyCnUHMXDI3LVnlvLSKbCVUZDw2eE-gZ2OdDT8ATQ"
+      }
+    },
+    {
+      "event_type": "claim.verified",
+      "event_time": "2026-05-19T15:02:16Z",
+      "spec_version": "0.1.0",
+      "schema_url": "https://openclaims.org/schemas/openclaims/0.1/ClaimEvent.schema.json",
+      "producer": {
+        "agent_id": "urn:openclaims:demo:verified-analysis-agent",
+        "agent_type": "pipeline",
+        "name": "OpenClaims Verified Analysis Demo",
+        "uri": "https://openclaims.org/examples/verified-analysis"
+      },
+      "claim_ref": "clm_FXbFBPRKFQEqLqmtRTWHtJjowu",
+      "verification": {
+        "verification_id": "ver_manager_approval",
+        "verification_result": "supported",
+        "verification_method": "source_attestation",
+        "claim_status": "active",
+        "validator": {
+          "agent_id": "urn:openclaims:demo:policy-source-checker",
+          "agent_type": "service",
+          "name": "Policy Source Checker",
+          "uri": "https://openclaims.org/examples/verified-analysis/source-checker"
+        },
+        "verified_at": "2026-05-19T15:02:16Z",
+        "confidence": 0.96
+      },
+      "evidence": [
+        {
+          "evidence_id": "ev_flnmeoZ2VYTMaPGczN0uQ6zMvY",
+          "source_ref": "src_3dU6c-5_RhSLPt6l4vHKjg0lxS",
+          "claim_ref": "clm_FXbFBPRKFQEqLqmtRTWHtJjowu",
+          "selector": {
+            "type": "page_span",
+            "page": 7,
+            "start": 69,
+            "end": 181
+          },
+          "support_type": "supports_directly",
+          "content_digest": {
+            "algorithm": "sha256",
+            "encoding": "base64url",
+            "value": "lZAzNgwyKQLNXvkhiTpASLtqOVWKmxnpoMg5ls65x8g"
+          },
+          "observed_at": "2026-05-19T15:02:16Z",
+          "facets": {
+            "quote": {
+              "_producer": "https://openclaims.org/examples/verified-analysis",
+              "_schemaURL": "https://openclaims.org/schemas/openclaims/0.1/facets/QuoteFacet.schema.json",
+              "text": "Overnight business travel must be approved by the employee's manager before airfare, lodging, or rail is booked."
+            }
+          }
+        }
+      ],
+      "agents": [],
+      "auditable_trace": {
+        "event_ids": [
+          "evt_6TNjBcVMIyrApVLPY6LamsMBj_"
+        ],
+        "hash_chain": [
+          {
+            "algorithm": "sha256",
+            "encoding": "base64url",
+            "value": "pEkyCnUHMXDI3LVnlvLSKbCVUZDw2eE-gZ2OdDT8ATQ"
+          }
+        ]
+      },
+      "event_id": "evt_JjZpOi-pryJP4_yKHHhxpdHceS",
+      "digest": {
+        "algorithm": "sha256",
+        "encoding": "base64url",
+        "value": "a8AV_0IHLU9_H2NQAEfR_Rr7KTaWX2gjGPTi-6F1JfM"
+      }
+    },
+    {
+      "event_type": "claim.emitted",
+      "event_time": "2026-05-19T15:02:14Z",
+      "spec_version": "0.1.0",
+      "schema_url": "https://openclaims.org/schemas/openclaims/0.1/ClaimEvent.schema.json",
+      "producer": {
+        "agent_id": "urn:openclaims:demo:verified-analysis-agent",
+        "agent_type": "pipeline",
+        "name": "OpenClaims Verified Analysis Demo",
+        "uri": "https://openclaims.org/examples/verified-analysis"
+      },
+      "claim": {
+        "claim_id": "clm_5HwWQszp2vo_cy3D3xF34zuXLM",
+        "text": "The supporting evidence comes from page 7 of the travel policy.",
+        "claim_type": "factual",
+        "context": {
+          "question": "Does the travel policy require approval for overnight trips?",
+          "answer_id": "verified-analysis-demo-answer"
+        },
+        "asserted_at": "2026-05-19T15:02:14Z",
+        "derived_from_claims": [],
+        "relations": []
+      },
+      "sources": [
+        {
+          "source_id": "src_3dU6c-5_RhSLPt6l4vHKjg0lxS",
+          "uri": "file://examples/verified-analysis/corpus/travel-policy.md",
+          "version": "2026.3",
+          "observed_at": "2026-05-19T15:02:16Z",
+          "retrieved_at": "2026-05-19T15:02:16Z",
+          "digest": {
+            "algorithm": "sha256",
+            "encoding": "base64url",
+            "value": "2I1VqmUNUQqYhARJscUlCmsCuWTPRJLH1Z0XG5Uqb3I"
+          },
+          "facets": {
+            "document": {
+              "_producer": "https://openclaims.org/examples/verified-analysis",
+              "_schemaURL": "https://openclaims.org/schemas/openclaims/0.1/facets/DocumentFacet.schema.json",
+              "title": "Acme Travel and Expense Policy"
+            }
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "evidence_id": "ev_1moT2xe2cSDIAauUQV3bs9ToKg",
+          "source_ref": "src_3dU6c-5_RhSLPt6l4vHKjg0lxS",
+          "claim_ref": "clm_5HwWQszp2vo_cy3D3xF34zuXLM",
+          "selector": {
+            "type": "page_span",
+            "page": 7,
+            "start": 214,
+            "end": 314
+          },
+          "support_type": "supports_directly",
+          "content_digest": {
+            "algorithm": "sha256",
+            "encoding": "base64url",
+            "value": "krogfkVvD6Ez_vplVUjSRKPYB9H7xV0gXaI2P19Hjqs"
+          },
+          "observed_at": "2026-05-19T15:02:16Z",
+          "facets": {
+            "quote": {
+              "_producer": "https://openclaims.org/examples/verified-analysis",
+              "_schemaURL": "https://openclaims.org/schemas/openclaims/0.1/facets/QuoteFacet.schema.json",
+              "text": "The approval rule for overnight business travel appears in Section 4.2, page 7 of the travel policy."
+            }
+          }
+        }
+      ],
+      "tool_runs": [
+        {
+          "tool_run_id": "run_uhx2f9wxdthPI-aq8jY3hYGokc",
+          "tool_type": "retriever",
+          "tool": {
+            "name": "deterministic-policy-retriever",
+            "version": "0.1.0",
+            "provider": "openclaims",
+            "model": "none",
+            "model_version": "offline",
+            "prompt_template_id": "verified-analysis-demo-v1"
+          },
+          "parameters_summary": {
+            "question_digest": {
+              "algorithm": "sha256",
+              "encoding": "base64url",
+              "value": "s7-ziUKJswZz-rns1cs9kqZbITMGrksNywL6SOP_V4c"
+            },
+            "corpus_digest": {
+              "algorithm": "sha256",
+              "encoding": "base64url",
+              "value": "zLATn-wGMf0jDNkOkkNSVycB050rYF8S6rC6L5bZ2bE"
+            },
+            "top_k": 3,
+            "network": "disabled"
+          },
+          "parameters_digest": {
+            "algorithm": "sha256",
+            "encoding": "base64url",
+            "value": "jc2M9UWh1uS13x-FezNq63LpEVUEgLtL6FfeJwisek8"
+          },
+          "trace_ref": "verified-analysis-demo/offline-run-001"
+        }
+      ],
+      "inferences": [],
+      "agents": [],
+      "auditable_trace": {
+        "event_ids": [],
+        "hash_chain": [
+          {
+            "algorithm": "sha256",
+            "encoding": "base64url",
+            "value": "pEkyCnUHMXDI3LVnlvLSKbCVUZDw2eE-gZ2OdDT8ATQ"
+          },
+          {
+            "algorithm": "sha256",
+            "encoding": "base64url",
+            "value": "a8AV_0IHLU9_H2NQAEfR_Rr7KTaWX2gjGPTi-6F1JfM"
+          }
+        ]
+      },
+      "event_id": "evt_GVdaXWIxPxE3F1_BSbVNpPsMYW",
+      "digest": {
+        "algorithm": "sha256",
+        "encoding": "base64url",
+        "value": "0COHY059FkaW6Y7tuFcZgfQICnoUi41WCPmtfp4XEns"
+      }
+    },
+    {
+      "event_type": "claim.verified",
+      "event_time": "2026-05-19T15:02:16Z",
+      "spec_version": "0.1.0",
+      "schema_url": "https://openclaims.org/schemas/openclaims/0.1/ClaimEvent.schema.json",
+      "producer": {
+        "agent_id": "urn:openclaims:demo:verified-analysis-agent",
+        "agent_type": "pipeline",
+        "name": "OpenClaims Verified Analysis Demo",
+        "uri": "https://openclaims.org/examples/verified-analysis"
+      },
+      "claim_ref": "clm_5HwWQszp2vo_cy3D3xF34zuXLM",
+      "verification": {
+        "verification_id": "ver_page_7_evidence",
+        "verification_result": "supported",
+        "verification_method": "model_check",
+        "claim_status": "active",
+        "validator": {
+          "agent_id": "urn:openclaims:demo:policy-source-checker",
+          "agent_type": "service",
+          "name": "Policy Source Checker",
+          "uri": "https://openclaims.org/examples/verified-analysis/source-checker"
+        },
+        "verified_at": "2026-05-19T15:02:16Z",
+        "confidence": 0.99
+      },
+      "evidence": [
+        {
+          "evidence_id": "ev_1moT2xe2cSDIAauUQV3bs9ToKg",
+          "source_ref": "src_3dU6c-5_RhSLPt6l4vHKjg0lxS",
+          "claim_ref": "clm_5HwWQszp2vo_cy3D3xF34zuXLM",
+          "selector": {
+            "type": "page_span",
+            "page": 7,
+            "start": 214,
+            "end": 314
+          },
+          "support_type": "supports_directly",
+          "content_digest": {
+            "algorithm": "sha256",
+            "encoding": "base64url",
+            "value": "krogfkVvD6Ez_vplVUjSRKPYB9H7xV0gXaI2P19Hjqs"
+          },
+          "observed_at": "2026-05-19T15:02:16Z",
+          "facets": {
+            "quote": {
+              "_producer": "https://openclaims.org/examples/verified-analysis",
+              "_schemaURL": "https://openclaims.org/schemas/openclaims/0.1/facets/QuoteFacet.schema.json",
+              "text": "The approval rule for overnight business travel appears in Section 4.2, page 7 of the travel policy."
+            }
+          }
+        }
+      ],
+      "agents": [],
+      "auditable_trace": {
+        "event_ids": [
+          "evt_6TNjBcVMIyrApVLPY6LamsMBj_",
+          "evt_JjZpOi-pryJP4_yKHHhxpdHceS",
+          "evt_GVdaXWIxPxE3F1_BSbVNpPsMYW"
+        ],
+        "hash_chain": [
+          {
+            "algorithm": "sha256",
+            "encoding": "base64url",
+            "value": "pEkyCnUHMXDI3LVnlvLSKbCVUZDw2eE-gZ2OdDT8ATQ"
+          },
+          {
+            "algorithm": "sha256",
+            "encoding": "base64url",
+            "value": "a8AV_0IHLU9_H2NQAEfR_Rr7KTaWX2gjGPTi-6F1JfM"
+          },
+          {
+            "algorithm": "sha256",
+            "encoding": "base64url",
+            "value": "0COHY059FkaW6Y7tuFcZgfQICnoUi41WCPmtfp4XEns"
+          }
+        ]
+      },
+      "event_id": "evt_sAUQrVbw9u_QsBECre2hMwPqfj",
+      "digest": {
+        "algorithm": "sha256",
+        "encoding": "base64url",
+        "value": "26oEWG-ABa9C-H6lWxip3UpT5saeB9cy0v6EnnoVvt4"
+      }
+    },
+    {
+      "event_type": "claim.emitted",
+      "event_time": "2026-05-19T15:02:14Z",
+      "spec_version": "0.1.0",
+      "schema_url": "https://openclaims.org/schemas/openclaims/0.1/ClaimEvent.schema.json",
+      "producer": {
+        "agent_id": "urn:openclaims:demo:verified-analysis-agent",
+        "agent_type": "pipeline",
+        "name": "OpenClaims Verified Analysis Demo",
+        "uri": "https://openclaims.org/examples/verified-analysis"
+      },
+      "claim": {
+        "claim_id": "clm_tqX-C3JloPscllvpv5KXLAIT8-",
+        "text": "Director approval is not required for overnight trips.",
+        "claim_type": "factual",
+        "context": {
+          "question": "Does the travel policy require approval for overnight trips?",
+          "answer_id": "verified-analysis-demo-answer"
+        },
+        "asserted_at": "2026-05-19T15:02:14Z",
+        "derived_from_claims": [],
+        "relations": []
+      },
+      "sources": [
+        {
+          "source_id": "src_glBbbO-BRlnryUbl2s8dynfyYK",
+          "uri": "file://examples/verified-analysis/corpus/travel-policy.md",
+          "version": "2026.4",
+          "observed_at": "2026-05-19T15:04:38Z",
+          "retrieved_at": "2026-05-19T15:04:38Z",
+          "digest": {
+            "algorithm": "sha256",
+            "encoding": "base64url",
+            "value": "jg40bHT8HryJNZ2IPF16430mlHAouws8jp6vbdRx8IY"
+          },
+          "facets": {
+            "document": {
+              "_producer": "https://openclaims.org/examples/verified-analysis",
+              "_schemaURL": "https://openclaims.org/schemas/openclaims/0.1/facets/DocumentFacet.schema.json",
+              "title": "Acme Travel and Expense Policy"
+            }
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "evidence_id": "ev_KcA2LbOocSevZWYiTBygaAUu1i",
+          "source_ref": "src_glBbbO-BRlnryUbl2s8dynfyYK",
+          "claim_ref": "clm_tqX-C3JloPscllvpv5KXLAIT8-",
+          "selector": {
+            "type": "page_span",
+            "page": 7,
+            "start": 64,
+            "end": 163
+          },
+          "support_type": "contradicts",
+          "content_digest": {
+            "algorithm": "sha256",
+            "encoding": "base64url",
+            "value": "ZDS6hZeZrAL4YPY73ZFrfPZnuRqJTQeMSY0sEiNyNgQ"
+          },
+          "observed_at": "2026-05-19T15:04:38Z",
+          "facets": {
+            "quote": {
+              "_producer": "https://openclaims.org/examples/verified-analysis",
+              "_schemaURL": "https://openclaims.org/schemas/openclaims/0.1/facets/QuoteFacet.schema.json",
+              "text": "International overnight travel requires both manager approval and director approval before booking."
+            }
+          }
+        }
+      ],
+      "tool_runs": [
+        {
+          "tool_run_id": "run_uhx2f9wxdthPI-aq8jY3hYGokc",
+          "tool_type": "retriever",
+          "tool": {
+            "name": "deterministic-policy-retriever",
+            "version": "0.1.0",
+            "provider": "openclaims",
+            "model": "none",
+            "model_version": "offline",
+            "prompt_template_id": "verified-analysis-demo-v1"
+          },
+          "parameters_summary": {
+            "question_digest": {
+              "algorithm": "sha256",
+              "encoding": "base64url",
+              "value": "s7-ziUKJswZz-rns1cs9kqZbITMGrksNywL6SOP_V4c"
+            },
+            "corpus_digest": {
+              "algorithm": "sha256",
+              "encoding": "base64url",
+              "value": "zLATn-wGMf0jDNkOkkNSVycB050rYF8S6rC6L5bZ2bE"
+            },
+            "top_k": 3,
+            "network": "disabled"
+          },
+          "parameters_digest": {
+            "algorithm": "sha256",
+            "encoding": "base64url",
+            "value": "jc2M9UWh1uS13x-FezNq63LpEVUEgLtL6FfeJwisek8"
+          },
+          "trace_ref": "verified-analysis-demo/offline-run-001"
+        }
+      ],
+      "inferences": [],
+      "agents": [],
+      "auditable_trace": {
+        "event_ids": [],
+        "hash_chain": [
+          {
+            "algorithm": "sha256",
+            "encoding": "base64url",
+            "value": "pEkyCnUHMXDI3LVnlvLSKbCVUZDw2eE-gZ2OdDT8ATQ"
+          },
+          {
+            "algorithm": "sha256",
+            "encoding": "base64url",
+            "value": "a8AV_0IHLU9_H2NQAEfR_Rr7KTaWX2gjGPTi-6F1JfM"
+          },
+          {
+            "algorithm": "sha256",
+            "encoding": "base64url",
+            "value": "0COHY059FkaW6Y7tuFcZgfQICnoUi41WCPmtfp4XEns"
+          },
+          {
+            "algorithm": "sha256",
+            "encoding": "base64url",
+            "value": "26oEWG-ABa9C-H6lWxip3UpT5saeB9cy0v6EnnoVvt4"
+          }
+        ]
+      },
+      "event_id": "evt_uNasBlpf0kF2DOCaYUHyDKxJtV",
+      "digest": {
+        "algorithm": "sha256",
+        "encoding": "base64url",
+        "value": "n20wEAnED6JPa9OqN3k6j_nbQ5EQRBAFT4iYCSgokH0"
+      }
+    },
+    {
+      "event_type": "claim.disputed",
+      "event_time": "2026-05-19T15:04:38Z",
+      "spec_version": "0.1.0",
+      "schema_url": "https://openclaims.org/schemas/openclaims/0.1/ClaimEvent.schema.json",
+      "producer": {
+        "agent_id": "urn:openclaims:demo:verified-analysis-agent",
+        "agent_type": "pipeline",
+        "name": "OpenClaims Verified Analysis Demo",
+        "uri": "https://openclaims.org/examples/verified-analysis"
+      },
+      "claim_ref": "clm_tqX-C3JloPscllvpv5KXLAIT8-",
+      "verification": {
+        "verification_id": "ver_director_not_required",
+        "verification_result": "contradicted",
+        "verification_method": "human_review",
+        "claim_status": "disputed",
+        "validator": {
+          "agent_id": "urn:openclaims:demo:policy-source-checker",
+          "agent_type": "service",
+          "name": "Policy Source Checker",
+          "uri": "https://openclaims.org/examples/verified-analysis/source-checker"
+        },
+        "verified_at": "2026-05-19T15:04:38Z",
+        "confidence": 0.91
+      },
+      "contradicting_evidence": [
+        {
+          "evidence_id": "ev_KcA2LbOocSevZWYiTBygaAUu1i",
+          "source_ref": "src_glBbbO-BRlnryUbl2s8dynfyYK",
+          "claim_ref": "clm_tqX-C3JloPscllvpv5KXLAIT8-",
+          "selector": {
+            "type": "page_span",
+            "page": 7,
+            "start": 64,
+            "end": 163
+          },
+          "support_type": "contradicts",
+          "content_digest": {
+            "algorithm": "sha256",
+            "encoding": "base64url",
+            "value": "ZDS6hZeZrAL4YPY73ZFrfPZnuRqJTQeMSY0sEiNyNgQ"
+          },
+          "observed_at": "2026-05-19T15:04:38Z",
+          "facets": {
+            "quote": {
+              "_producer": "https://openclaims.org/examples/verified-analysis",
+              "_schemaURL": "https://openclaims.org/schemas/openclaims/0.1/facets/QuoteFacet.schema.json",
+              "text": "International overnight travel requires both manager approval and director approval before booking."
+            }
+          }
+        }
+      ],
+      "dispute_rationale": "The revised 2026.4 policy adds director approval for international overnight travel.",
+      "auditable_trace": {
+        "event_ids": [
+          "evt_6TNjBcVMIyrApVLPY6LamsMBj_",
+          "evt_JjZpOi-pryJP4_yKHHhxpdHceS",
+          "evt_GVdaXWIxPxE3F1_BSbVNpPsMYW",
+          "evt_sAUQrVbw9u_QsBECre2hMwPqfj",
+          "evt_uNasBlpf0kF2DOCaYUHyDKxJtV"
+        ],
+        "hash_chain": [
+          {
+            "algorithm": "sha256",
+            "encoding": "base64url",
+            "value": "pEkyCnUHMXDI3LVnlvLSKbCVUZDw2eE-gZ2OdDT8ATQ"
+          },
+          {
+            "algorithm": "sha256",
+            "encoding": "base64url",
+            "value": "a8AV_0IHLU9_H2NQAEfR_Rr7KTaWX2gjGPTi-6F1JfM"
+          },
+          {
+            "algorithm": "sha256",
+            "encoding": "base64url",
+            "value": "0COHY059FkaW6Y7tuFcZgfQICnoUi41WCPmtfp4XEns"
+          },
+          {
+            "algorithm": "sha256",
+            "encoding": "base64url",
+            "value": "26oEWG-ABa9C-H6lWxip3UpT5saeB9cy0v6EnnoVvt4"
+          },
+          {
+            "algorithm": "sha256",
+            "encoding": "base64url",
+            "value": "n20wEAnED6JPa9OqN3k6j_nbQ5EQRBAFT4iYCSgokH0"
+          }
+        ]
+      },
+      "event_id": "evt_ZXznAF7v7TSCjZ9Jcq6JCTKUKQ",
+      "digest": {
+        "algorithm": "sha256",
+        "encoding": "base64url",
+        "value": "JfpcN912kmkSn1fbMAfIsY7_PCjF3EWTwR95fHcvpmk"
+      }
+    }
+  ]
+}
