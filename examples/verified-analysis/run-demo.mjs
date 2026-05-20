@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import {
@@ -25,6 +25,7 @@ const repoRoot = join(here, "..", "..");
 const corpusPath = join(here, "corpus", "travel-policy.md");
 const outputDir = join(here, "output");
 const siteAssetPath = join(repoRoot, "site", "assets", "verified-analysis-demo.json");
+const checkMode = process.argv.includes("--check");
 
 const QUESTION = "Does the travel policy require approval for overnight trips?";
 const ANSWER =
@@ -97,15 +98,22 @@ for (const event of events) {
 
 const response = embeddedResponse({ question: QUESTION, answer: ANSWER }, events);
 const browserFixture = createBrowserFixture();
+const outputs = new Map([
+  [join(outputDir, "event-history.json"), { question: QUESTION, answer: ANSWER, events }],
+  [join(outputDir, "embedded-response.json"), response],
+  [join(outputDir, "jsonld.json"), jsonld],
+  [join(outputDir, "cloudevents.json"), cloudEvents],
+  [siteAssetPath, browserFixture]
+]);
 
-mkdirSync(outputDir, { recursive: true });
-writeJson(join(outputDir, "event-history.json"), { question: QUESTION, answer: ANSWER, events });
-writeJson(join(outputDir, "embedded-response.json"), response);
-writeJson(join(outputDir, "jsonld.json"), jsonld);
-writeJson(join(outputDir, "cloudevents.json"), cloudEvents);
-writeJson(siteAssetPath, browserFixture);
+if (checkMode) {
+  checkOutputs(outputs);
+} else {
+  mkdirSync(outputDir, { recursive: true });
+  for (const [path, value] of outputs) writeJson(path, value);
+}
 
-console.log(`verified-analysis demo: wrote ${events.length} events`);
+console.log(`verified-analysis demo: ${checkMode ? "checked" : "wrote"} ${events.length} events`);
 console.log(`verified-analysis demo: ${join(outputDir, "event-history.json")}`);
 console.log(`verified-analysis demo: ${siteAssetPath}`);
 
@@ -357,4 +365,20 @@ function createBrowserFixture() {
 
 function writeJson(path, value) {
   writeFileSync(path, `${JSON.stringify(value, null, 2)}\n`);
+}
+
+function checkOutputs(outputs) {
+  const mismatches = [];
+  for (const [path, value] of outputs) {
+    const expected = `${JSON.stringify(value, null, 2)}\n`;
+    if (!existsSync(path)) {
+      mismatches.push(`${path}: missing`);
+      continue;
+    }
+    const actual = readFileSync(path, "utf8");
+    if (actual !== expected) mismatches.push(`${path}: out of date`);
+  }
+  if (mismatches.length > 0) {
+    throw new Error(`Verified Analysis demo outputs are stale. Run pnpm demo:verified-analysis.\n${mismatches.join("\n")}`);
+  }
 }

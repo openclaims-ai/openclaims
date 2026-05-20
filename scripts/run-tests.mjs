@@ -1,6 +1,7 @@
 import { mkdtempSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
+import { execFileSync } from "node:child_process";
 import assert from "node:assert/strict";
 import {
   agent,
@@ -86,5 +87,10 @@ assert.equal(validateEvent(retracted).valid, true);
 
 const dir = mkdtempSync(join(tmpdir(), "openclaims-"));
 writeFileSync(join(dir, "claim-emitted.json"), JSON.stringify(emitted, null, 2));
+
+execFileSync(process.execPath, ["examples/verified-analysis/run-demo.mjs", "--check"], {
+  cwd: join(import.meta.dirname, ".."),
+  stdio: "inherit"
+});
 
 console.log("tests: passed");

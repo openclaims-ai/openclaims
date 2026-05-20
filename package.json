@@ -7,6 +7,7 @@
     "build": "node scripts/check-js.mjs",
     "test": "node scripts/run-tests.mjs",
     "demo:verified-analysis": "node examples/verified-analysis/run-demo.mjs",
+    "demo:verified-analysis:check": "node examples/verified-analysis/run-demo.mjs --check",
     "fixtures": "node packages/validator-cli/src/index.js fixtures",
     "validate": "node packages/validator-cli/src/index.js validate"
   },

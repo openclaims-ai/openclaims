@@ -24,6 +24,14 @@ The runner writes:
 
 The landing page uses `site/assets/verified-analysis-demo.json`, so the browser demo reflects the same generated fixture shape.
 
+Check that the committed outputs are still in sync with the deterministic generator:
+
+```sh
+pnpm demo:verified-analysis:check
+```
+
+`pnpm test` runs this check automatically.
+
 ## Validate the Output
 
 The runner validates every generated event and verifies every event digest before writing output.
